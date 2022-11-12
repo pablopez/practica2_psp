@@ -56,7 +56,7 @@ public class VideoGameProxy {
 	
 	public boolean update(VideoGame vg) {
 		try {
-			restTemplate.put(URL + vg.getId(), VideoGame.class);
+			restTemplate.put(URL + vg.getId(),vg, VideoGame.class);
 			return true;
 		} catch (HttpClientErrorException e) {
 			System.out.println("ERROR "+e.getStatusCode()+": videojuego [" + vg.getId() + "] no modificado");

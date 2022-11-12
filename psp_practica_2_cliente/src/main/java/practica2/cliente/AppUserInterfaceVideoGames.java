@@ -34,7 +34,7 @@ public class AppUserInterfaceVideoGames {
 		String name = sc.nextLine();
 		if(!name.equals("")) {
 			System.out.println("Nombre actualizado");
-			vg.setCompany(name);
+			vg.setName(name);
 		}
 		System.out.println("Introduzca la nueva compania o deje en blanco para que el nombre siga siendo "+vg.getCompany()+":");
 		String company = sc.nextLine();

@@ -4,7 +4,7 @@ package practica2.cliente.entities;
 public class VideoGame {
 	private String name;
 	private int id;
-	private String company;
+	private String company = "";
 	private double note;
 	
 	public VideoGame(){
@@ -27,7 +27,9 @@ public class VideoGame {
 	}
 	
 	public void setCompany(String company) {
-		this.company = company;
+		if(company != null) {
+			this.company = company;
+		}		
 	}
 
 	public String getName() {

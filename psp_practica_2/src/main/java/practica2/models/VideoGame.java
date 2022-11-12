@@ -26,7 +26,9 @@ public class VideoGame {
 	}
 	
 	public void setCompany(String company) {
-		this.company = company;
+		if(company != null) {
+			this.company = company;
+		}	
 	}
 
 	public String getName() {
