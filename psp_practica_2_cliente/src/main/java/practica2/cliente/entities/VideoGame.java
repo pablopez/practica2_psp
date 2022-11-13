@@ -1,6 +1,5 @@
 package practica2.cliente.entities;
 
-
 public class VideoGame {
 	private String name;
 	private int id;
@@ -57,6 +56,4 @@ public class VideoGame {
 	public String toString() {
 		return this.getId() + "|" + this.getName() + "|" + this.getCompany() + "|" + this.getNote();
 	}
-
-	
 }

@@ -11,7 +11,7 @@ public class AppUserInterfaceVideoGames {
 	private final Scanner sc = new Scanner(System.in);
 	
 	private final String menustr = 
-		"Seleccione una opción introduciéndo el número marcado: \n\n"+ 	
+		"Seleccione una opción introduciendo el número marcado: \n\n"+ 	
 			"\t1. Dar de alta un videojuego \n"+
 			"\t2. Dar de baja un videojuego por ID \n"+
 			"\t3. Modificar un videojuego por ID \n"+
@@ -36,10 +36,10 @@ public class AppUserInterfaceVideoGames {
 			System.out.println("Nombre actualizado");
 			vg.setName(name);
 		}
-		System.out.println("Introduzca la nueva compania o deje en blanco para que el nombre siga siendo "+vg.getCompany()+":");
+		System.out.println("Introduzca la nueva companía o deje en blanco para que el nombre siga siendo "+vg.getCompany()+":");
 		String company = sc.nextLine();
 		if(!company.equals("")) {
-			System.out.println("Compania actualizada");
+			System.out.println("Companía actualizada");
 			vg.setCompany(company);
 		}
 		double note = -1;
@@ -103,7 +103,7 @@ public class AppUserInterfaceVideoGames {
 	 				return id;
 	 			}
  			}catch(NumberFormatException e){  
-				System.out.println("La ID debe ser numerica");  
+				System.out.println("La ID debe ser numérica");  
 			} 			
  		}
  	}
@@ -122,11 +122,8 @@ public class AppUserInterfaceVideoGames {
 					}
 				}
 			}catch(NumberFormatException e){  
-				System.out.println("Introduzca una opcion valida o pulse intro para salir");  
+				System.out.println("Introduzca una opción válida o pulse intro para salir");  
 			}			
 		}
 	}
-	
-	
-	
 }

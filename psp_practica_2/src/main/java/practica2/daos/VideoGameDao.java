@@ -11,9 +11,9 @@ import practica2.models.VideoGame;
 @Component
 public class VideoGameDao {
 	
-	// elijo un mapa porque es la manera más eficiente de tener controlado un objeto por id
+	// se ha usado un mapa porque puede ser la manera más eficiente de tener controlado un objeto por id
 	public Map<Integer, VideoGame> videogames;
-	// esta variable hará de id autoincremental, cada vez que se añada un objeto suma uno
+	// esta variable hará de id autoincremental, cada vez que se añada un objeto,suma uno
 	private int aiid; 
 	
 	public VideoGameDao() {
@@ -61,6 +61,7 @@ public class VideoGameDao {
 		return vg_in_list;
 	}
 	
+	//checkear que el nombre no exista ya
 	public boolean isNameAvailable(String name) {
 		for(int id : videogames.keySet()) {
 			VideoGame current_vg = this.videogames.get(id);

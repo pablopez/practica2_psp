@@ -35,11 +35,11 @@ public class Application {
 			if(op == 0) {
 				break;
 			}else if( op == 1) {
-				// crea un video juego y lo intenta añadir
+				// crea un videojuego y lo intenta añadir
 				VideoGame vg = ui.create();
 				vgp.add(vg);
 			}else if( op == 2) {
-				// solicita la id y si existe borra el video juego
+				// solicita la id y si existe borra el videojuego
 				int id = ui.requestId();
 				if(vgp.delete(id)) {
 					System.out.println("Videojuego "+id+" borrado");
@@ -47,7 +47,7 @@ public class Application {
 					System.out.println("Videojuego "+id+" no se pudo borrar");
 				}
 			}else if( op == 3) {
-				// primero solicita una id, luego solicita el video juego y luego lo actualiza
+				// primero solicita una id, luego solicita el videojuego y luego lo actualiza
 				int id = ui.requestId();
 				VideoGame vg = vgp.get(id);
 				if(vg != null) {
@@ -67,7 +67,7 @@ public class Application {
 				}
 			}
 		}
-		System.out.println("se termino la ejecucion");
+		System.out.println("se ha terminado la ejecución");
 		((Closeable) context).close();
 	}
 }

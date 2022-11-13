@@ -46,7 +46,7 @@ public class VideoGameController {
 		System.out.println("Creando: " + vg);
 		ResponseEntity<VideoGame> entity_response = checkName(vg.getName()); // comprueba si el nombre es válido
 		if(entity_response == null) {
-			entity_response = checkStr(vg.getCompany()); // comprueba que la compañia es válida
+			entity_response = checkStr(vg.getCompany()); // comprueba que la compañía es válida
 		}
 		if(entity_response == null) {
 			entity_response = new ResponseEntity<VideoGame>(vgdao.add(vg),HttpStatus.CREATED);//201 CREATED

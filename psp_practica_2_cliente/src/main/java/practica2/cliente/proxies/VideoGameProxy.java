@@ -20,7 +20,7 @@ public class VideoGameProxy {
 		try {
 			// realizamos el get
 			ResponseEntity<VideoGame> response = restTemplate.getForEntity(URL + id, VideoGame.class);
-			// si todo va bien devolvemos el video juego
+			// si todo va bien devolvemos el videojuego
 			if(response.getStatusCode() == HttpStatus.OK) {	
 				return response.getBody();
 			}else {
@@ -43,6 +43,7 @@ public class VideoGameProxy {
 		}
 	}
 	
+	//añadir un videojuego
 	public VideoGame add(VideoGame vg) {
 		try {
 			ResponseEntity<VideoGame> response = restTemplate.postForEntity(URL, vg, VideoGame.class);
@@ -54,6 +55,7 @@ public class VideoGameProxy {
 		}
 	}
 	
+	//actualizar un videojuego
 	public boolean update(VideoGame vg) {
 		try {
 			restTemplate.put(URL + vg.getId(),vg, VideoGame.class);
@@ -64,6 +66,7 @@ public class VideoGameProxy {
 		}
 	}
 	
+	//borrar un videojuego
 	public boolean delete(int id) {
 		try {
 			restTemplate.delete(URL + id);
